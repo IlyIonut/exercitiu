@@ -1,0 +1,57 @@
+.TripCard{
+    width: 1057px;
+    height: auto;
+    background-color: #2D333D;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 736px auto;
+
+   
+    .TripImg{
+        width: 736px;
+        height: auto;
+    }
+    .TripContext{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .TripText{
+            padding-right: 70px;
+        }
+        .PriceCard{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #181D26;
+            padding: 10px;
+            //margin: 10px;
+            margin-top: 40px;
+            border-radius: 10px;
+            .Buy{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #46C351;
+                color: white;
+                width: 94px;
+                height: auto;
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 10px;
+                margin:5px;
+            }
+            .PriceContext{
+                margin:5px;
+                h2{
+                    margin: 0px;
+                    font-size: 31px;
+                }
+                h5{
+                    font-size: 13px;
+                    margin:0px;
+                }
+            }
+        }
+    }
+}

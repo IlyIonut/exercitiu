@@ -1,0 +1,54 @@
+.Header{
+    width: 100%;
+    background: #141922;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    .NavBar{
+        height: 60px;
+        width: 1057px;
+        display: flex;
+        -webkit-box-align: start;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: space-between;
+        align-content: center;
+        .LogoContainer{
+            height: 100%;
+            width: 250px;
+            display:flex;
+            justify-content:space-between;
+            @media (max-width: 768px) {
+                padding:10px;
+              }
+            .Logo{
+                width: 154;
+                height: auto;
+            }
+        }
+        .NavBarContainer{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-right: 300px;
+            .NavLink{
+                display: flex;
+                align-items: center;
+                margin-right: 40px;
+                font-size: 16px;
+            }
+    
+        }
+        .Shop{
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+    
+      }
+}
