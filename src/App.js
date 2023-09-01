@@ -1,8 +1,10 @@
 import './App.scss';
+import Footer from './Footer/footer.component';
 
 import NavBar from './NavBar/navbar.component';
 import Trial from './Trial/trial.component';
 import TripCard from './TripCard/tripcard.component';
+import TextZone from './textzone/textzone.component';
 
 function App() {
   return (
@@ -10,9 +12,8 @@ function App() {
       <NavBar/>
       <TripCard/>
       <Trial/>
-      <div className='Footer'>
-        Yuuuuu
-      </div>
+      <TextZone/>
+      <Footer/>
     </div>
   );
 }

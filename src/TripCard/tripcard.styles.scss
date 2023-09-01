@@ -1,57 +1,141 @@
-.TripCard{
+.swiper {
     width: 1057px;
     height: auto;
-    background-color: #2D333D;
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 736px auto;
-
-   
-    .TripImg{
-        width: 736px;
-        height: auto;
-    }
-    .TripContext{
+    @media (max-width: 768px) {
+        width: 400px; /* Adjust width for mobile screens */
         display: flex;
-        flex-direction: column;
-        padding: 10px;
-        .TripText{
-            padding-right: 70px;
-        }
-        .PriceCard{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #181D26;
-            padding: 10px;
-            //margin: 10px;
-            margin-top: 40px;
-            border-radius: 10px;
-            .Buy{
+        align-items: center;
+        justify-content: center;
+      }
+  
+        .TripCard{
+            width: 1057px;
+            height: 395px;
+            background-color: #2D333D;
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 736px auto;
+            @media (max-width: 768px) {
+                width: 400px; /* Adjust width for mobile screens */
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #46C351;
-                color: white;
-                width: 94px;
-                height: auto;
-                font-size: 16px;
+              }
+        
+        
+        
+    
+        .TripImg{
+            width: 736px;
+            height: auto;
+            position: relative;
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 100%; /* Set height to 100% to match the card height */
+                background-image: url('../assets/trip.svg'); /* Set the background image */
+                background-size: cover; /* Ensure the background covers the entire card */
+                background-repeat: no-repeat; /* Prevent background image from repeating */
+              }
+        }
+        .Destination{
+            position: absolute;
+            margin-left: 15px;
+            font-size: 16px;
+            h4{
+                margin-bottom: 0px;
+            }
+            p{
+                margin:0px;
+            }
+            @media (max-width: 768px) {
+                margin-top: 80px;
+                margin-left: 200px;
+              }
+        }
+        .TripContext{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            
+            .TripText{
+                padding-right: 70px;
+                font-weight: 400;
+                .Title{
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    font-weight: 700;
+                    p{
+                        font-weight: 400;
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+            }
+            .PriceCard{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #272B35;
                 padding: 10px;
+                margin-top: 80px;
+                margin-bottom: 10px;
                 border-radius: 10px;
-                margin:5px;
-            }
-            .PriceContext{
-                margin:5px;
-                h2{
-                    margin: 0px;
-                    font-size: 31px;
+                border-color: #181D26;
+
+                @keyframes pulse {
+                    0% {
+                      transform: scale(1);
+                    }
+                    50% {
+                      transform: scale(1.1);
+                    }
+                    100% {
+                      transform: scale(1);
+                    }
+                  }
+                  
+            
+                .Buy{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #46C351;
+                    color: white;
+                    width: 94px;
+                    height: auto;
+                    font-size: 16px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    margin:5px;
+                    cursor: pointer;
+                    transition: transform 0.5s ease-in-out;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
                 }
-                h5{
-                    font-size: 13px;
-                    margin:0px;
+                
+                .PriceContext{
+                    margin:5px;
+                    h2{
+                        margin: 0px;
+                        font-size: 31px;
+                        font-weight: 700;
+                    }
+                    h5{
+                        font-size: 13px;
+                        margin:0px;
+                        font-weight: 400;
+                    }
                 }
+
             }
+            @media (max-width: 768px) {
+                position: absolute;
+              }
         }
     }
 }

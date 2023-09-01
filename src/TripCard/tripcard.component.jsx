@@ -1,28 +1,81 @@
 import './tripcard.styles.scss';
-import {ReactComponent as Trip} from '../assets/Trip.svg'
+import {ReactComponent as Trip} from '../assets/trip.svg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation} from 'swiper/modules';
 
 
-const TripCard = () =>{
-    return(
-        <div className="TripCard">
-            <Trip className='TripImg'/>
-            <div className='TripContext'>
-                <div className='TripText'>
-                    <h2>Enceladus</h2>
-                    <p>is the sixth-largest moon of Saturn. It is about a tenth of Saturn's largest moon, Titan.</p>
-                    <p>Explore this amazing cosmic marvel in a safe and fast trip with our aerospace company.</p>
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import SwiperNavButton from '../swiper-nav-button.component';
+
+
+
+const trips = [
+    {
+      destination: 'ENCELADUS',
+      system: 'The Saturn System',
+      distance: 'Distance: 9.5',
+      population: 'AUPopulation: 3920',
+      image: "../assets/trip.svg",
+      title: 'Enceladus',
+      description: 'Enceladus is the sixth-largest moon of Saturn. It is about a tenth of Saturn\'s largest moon, Titan.',
+      price: '999.990 €',
+      ticketType: 'one way ticket',
+    },
+    {
+        destination: 'ENCELADUS',
+        system: 'The Saturn System',
+        distance: 'Distance: 9.5',
+        population: 'AUPopulation: 3920',
+        image: '../assets/trip.svg',
+        title: 'Enceladus',
+        description: 'Enceladus is the sixth-largest moon of Saturn. It is about a tenth of Saturn\'s largest moon, Titan.',
+        price: '999.990 €',
+        ticketType: 'one way ticket',
+      },
+    // Add more trip objects as needed
+  ];
+  
+  const TripCard = () => {
+
+    
+    return (
+      <>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          {trips.map((trip, index) => (
+            <SwiperSlide key={index}>
+              <div className="TripCard">
+                <Trip className='TripImg'/>
+                <div className="Destination">
+                  <h4>{trip.destination}</h4>
+                  <p>{trip.system}</p>
+                  <p>{trip.distance}</p>
+                  <p>{trip.population}</p>
                 </div>
-                <div className='PriceCard'>
-                    <div className='PriceContext'>
-                        <h2>999.990 €</h2>
-                        <h5>one way ticket</h5>
+                <div className="TripContext">
+                  <div className="TripText">
+                    <div className="Title">
+                      <p>{trip.title}</p>
                     </div>
-                    <div className='Buy'>Purchase</div>
+                    <p>{trip.description}</p>
+                    <p>Explore this amazing cosmic marvel in a safe and fast trip with our aerospace company.</p>
+                  </div>
+                  <div className="PriceCard">
+                    <div className="PriceContext">
+                      <h2>{trip.price}</h2>
+                      <h5>{trip.ticketType}</h5>
+                    </div>
+                    <button className="Buy">Purchase</button>
+                  </div>
                 </div>
-            </div>
-            
-        </div>
-    )
-}
-
-export default TripCard;
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </>
+    );
+  };
+  
+  export default TripCard;

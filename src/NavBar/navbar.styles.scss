@@ -1,3 +1,5 @@
+@import '../breakpoint/breakpoint.scss';
+
 .Header{
     width: 100%;
     background: #141922;
@@ -7,6 +9,10 @@
     -webkit-box-pack: center;
     justify-content: center;
     align-content: center;
+    @media only screen and (max-width: 600px) {
+        height: auto;
+        
+      }
     .NavBar{
         height: 60px;
         width: 1057px;
@@ -16,6 +22,10 @@
         -webkit-box-pack: center;
         justify-content: space-between;
         align-content: center;
+        @media only screen and (max-width: 600px) {
+            height: auto;
+            
+          }
         .LogoContainer{
             height: 100%;
             width: 250px;
@@ -27,8 +37,10 @@
             .Logo{
                 width: 154;
                 height: auto;
+                
             }
         }
+        
         .NavBarContainer{
             width: 50%;
             height: 100%;
@@ -36,19 +48,93 @@
             align-items: center;
             justify-content: flex-start;
             margin-right: 300px;
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
             .NavLink{
                 display: flex;
                 align-items: center;
                 margin-right: 40px;
                 font-size: 16px;
+                
+            }
+            @media only screen and (max-width:600px) {
+                display: none;
+            }
+            div:hover{
+                background-color: #555;
             }
     
         }
         .Shop{
             display: flex;
             align-items: center;
+            justify-content: center;
             font-size: 16px;
+            margin-right: 15px;
+            @media only screen and (max-width: 600px) {
+                display: block;
+              }
         }
-    
-      }
+    }
+    .MobileNav{
+        display: flex;
+        height: 120px;
+        margin-right: 20px;
+        .MobileMenu{
+            width: 100px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-right: 30px;
+            
+            .MobNavLink{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-right: 20px;
+                margin-left:20px;
+                font-size: 16px;
+                width: 80px;
+                height: 30px;
+                padding-left: 10px;
+            }
+        }
+        .BarMenu{
+            margin: auto 0;
+            display: none;
+            cursor: pointer;
+            margin-right: 5px;
+            div{
+                width: 35px;
+                height: 3px;
+                background-color: white;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            .open .Bar1 {
+                -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+                transform: rotate(-45deg) translate(-6px, 6px);
+            }
+            .open .Bar2 {
+                opacity: 0;
+            }
+            .open .Bar3{
+                -webkit-transform: rotate(45deg) translate(-6px, -8px);
+                transform: rotate(45deg) translate(-6px, -8px);
+            }
+
+            
+              @media only screen and (max-width: 600px) {
+                display: block;
+                
+              }
+            
+        }
+    }
+        
 }
