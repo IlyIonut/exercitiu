@@ -1,5 +1,5 @@
 import './tripcard.styles.scss';
-import {ReactComponent as Trip} from '../assets/trip.svg'
+import {ReactComponent as Trip} from '../assets/trip.svgz'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation} from 'swiper/modules';
 
