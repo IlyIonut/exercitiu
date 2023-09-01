@@ -2,13 +2,14 @@ import './tripcard.styles.scss';
 import {ReactComponent as Trip} from '../assets/trip.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation} from 'swiper/modules';
-
+import tripImage from '../assets/trip.svg';
+import { useEffect, useState } from 'react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import SwiperNavButton from '../swiper-nav-button.component';
+
 
 
 
@@ -18,7 +19,6 @@ const trips = [
       system: 'The Saturn System',
       distance: 'Distance: 9.5',
       population: 'AUPopulation: 3920',
-      image: "../assets/trip.svg",
       title: 'Enceladus',
       description: 'Enceladus is the sixth-largest moon of Saturn. It is about a tenth of Saturn\'s largest moon, Titan.',
       price: '999.990 €',
@@ -29,25 +29,26 @@ const trips = [
         system: 'The Saturn System',
         distance: 'Distance: 9.5',
         population: 'AUPopulation: 3920',
-        image: '../assets/trip.svg',
         title: 'Enceladus',
         description: 'Enceladus is the sixth-largest moon of Saturn. It is about a tenth of Saturn\'s largest moon, Titan.',
         price: '999.990 €',
         ticketType: 'one way ticket',
       },
-    // Add more trip objects as needed
+
   ];
   
   const TripCard = () => {
 
-    
+   
     return (
       <>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {trips.map((trip, index) => (
             <SwiperSlide key={index}>
-              <div className="TripCard">
-                <Trip className='TripImg'/>
+              <div className='TripCard'>
+                <div className="TripImg">
+                    <Trip  />
+                </div>
                 <div className="Destination">
                   <h4>{trip.destination}</h4>
                   <p>{trip.system}</p>
