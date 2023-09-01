@@ -2,8 +2,7 @@ import './tripcard.styles.scss';
 import {ReactComponent as Trip} from '../assets/trip.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation} from 'swiper/modules';
-import tripImage from '../assets/trip.svg';
-import { useEffect, useState } from 'react';
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
