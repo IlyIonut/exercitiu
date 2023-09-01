@@ -1,8 +1,7 @@
 import './tripcard.styles.scss';
-import {ReactComponent as Trip} from '../assets/trip.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation} from 'swiper/modules';
-
+import tripImage from '../assets/trip1.jpg';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -46,7 +45,7 @@ const trips = [
             <SwiperSlide key={index}>
               <div className='TripCard'>
                 <div className="TripImg">
-                    <Trip  />
+                    <img src={tripImage} alt="Trip"/>
                 </div>
                 <div className="Destination">
                   <h4>{trip.destination}</h4>
